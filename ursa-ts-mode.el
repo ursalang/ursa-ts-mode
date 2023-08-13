@@ -1,6 +1,7 @@
 ;;; ursa-ts-mode.el --- Tree-sitter support for Ursa  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Free Software Foundation, Inc.
+;; Copyright (C) 2023 Reuben Thomas <rrt@sc3d.org>
 
 ;; Author     : Reuben Thomas <rrt@sc3d.org>
 ;; Maintainer : Reuben Thomas <rrt@sc3d.org>
@@ -12,7 +13,7 @@
 
 ;; This file is not part of GNU Emacs.
 
-;; This pacakge is free software: you can redistribute it and/or modify
+;; This package is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
@@ -26,6 +27,9 @@
 ;; along with this package.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
+;;
+;; An editing mode for the Ursa programming language:
+;; https://github.com/ursalang
 ;;
 ;; This package was adapted from json-ts-mode.el by Theodor Thornhill,
 ;; from Emacs 29.1.
