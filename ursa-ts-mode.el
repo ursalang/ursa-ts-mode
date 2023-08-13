@@ -1,14 +1,14 @@
-;;; ursa-ts-mode.el --- tree-sitter support for Ursa  -*- lexical-binding: t; -*-
+;;; ursa-ts-mode.el --- Tree-sitter support for Ursa  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Free Software Foundation, Inc.
 
 ;; Author     : Reuben Thomas <rrt@sc3d.org>
 ;; Maintainer : Reuben Thomas <rrt@sc3d.org>
 ;; Created    : August 2023
-;; Keywords   : ursalang languages tree-sitter
-
-;; This package was adapted from json-ts-mode.el by Theodor Thornhill,
-;; from Emacs 29.1.
+;; Version    : 1.0
+;; Keywords   : ursalang, languages, tree-sitter
+;; Package-Requires : ((emacs "29.1"))
+;; URL: https://github.com/ursalang/ursa-ts-mode
 
 ;; This file is not part of GNU Emacs.
 
@@ -27,6 +27,8 @@
 
 ;;; Commentary:
 ;;
+;; This package was adapted from json-ts-mode.el by Theodor Thornhill,
+;; from Emacs 29.1.
 
 ;;; Code:
 
