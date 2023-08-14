@@ -80,8 +80,10 @@
      ((node-is "}") parent-bol 0)
      ((node-is ")") parent-bol 0)
      ((node-is "]") parent-bol 0)
+     ((parent-is "block") parent-bol ursa-ts-mode-indent-offset)
+     ((parent-is "list") parent-bol ursa-ts-mode-indent-offset)
      ((parent-is "object") parent-bol ursa-ts-mode-indent-offset)
-     ((parent-is "array") parent-bol ursa-ts-mode-indent-offset))))
+     ((parent-is "map") parent-bol ursa-ts-mode-indent-offset))))
 
 (defvar ursa-ts-mode--font-lock-settings
   (treesit-font-lock-rules
