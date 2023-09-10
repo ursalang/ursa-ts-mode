@@ -95,7 +95,7 @@
    '((["[" "]" "{" "}"]) @font-lock-bracket-face)
    :language 'ursa
    :feature 'keyword
-   '((["let" "if" "else" "use" "fn" (return) (break) (continue)]) @font-lock-keyword-face)
+   '((["let" "if" "else" "fn" "loop" "use" "return" "break" (continue)]) @font-lock-keyword-face)
    :language 'ursa
    :feature 'function-name
    '((call function: (identifier) @font-lock-function-name-face))
@@ -178,6 +178,7 @@ Return nil if there is no name or if NODE is not a defun node."
 
   (treesit-major-mode-setup))
 
+;;;###autoload
 (if (treesit-ready-p 'ursa)
     (add-to-list 'auto-mode-alist
                  '("\\.ursa\\'" . ursa-ts-mode)))
