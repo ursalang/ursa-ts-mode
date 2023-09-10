@@ -1,4 +1,4 @@
-;;; ursa-ts-mode.el --- Tree-sitter support for Ursa  -*- lexical-binding: t; -*-
+;;; ursa-ts-mode.el --- Major mode for Ursa, using tree-sitter  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Free Software Foundation, Inc.
 ;; Copyright (C) 2023 Reuben Thomas <rrt@sc3d.org>
