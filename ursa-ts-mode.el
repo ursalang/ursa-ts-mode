@@ -6,7 +6,7 @@
 ;; Author     : Reuben Thomas <rrt@sc3d.org>
 ;; Maintainer : Reuben Thomas <rrt@sc3d.org>
 ;; Created    : August 2023
-;; Version    : 1.3
+;; Version    : 1.3.1
 ;; Keywords   : ursalang, languages, tree-sitter
 ;; Package-Requires : ((emacs "29.1"))
 ;; URL: https://github.com/ursalang/ursa-ts-mode
@@ -29,7 +29,7 @@
 ;;; Commentary:
 ;;
 ;; An editing mode for the Ursa programming language:
-;; https://github.com/ursalang
+;; https://ursalang.github.io
 ;;
 ;; This package was adapted from json-ts-mode.el by Theodor Thornhill,
 ;; from Emacs 29.1.
