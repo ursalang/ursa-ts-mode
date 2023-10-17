@@ -142,7 +142,7 @@ Return nil if there is no name or if NODE is not a defun node."
   :syntax-table ursa-ts-mode--syntax-table
 
   (unless (treesit-ready-p 'ursa)
-    (error "Tree-sitter for JSON isn't available"))
+    (error "Tree-sitter for Ursa isn't available"))
 
   (treesit-parser-create 'ursa)
 
