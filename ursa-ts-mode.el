@@ -6,7 +6,7 @@
 ;; Author     : Reuben Thomas <rrt@sc3d.org>
 ;; Maintainer : Reuben Thomas <rrt@sc3d.org>
 ;; Created    : August 2023
-;; Version    : 1.3.3
+;; Version    : 1.3.4
 ;; Keywords   : ursalang, languages, tree-sitter
 ;; Package-Requires : ((emacs "29.1"))
 ;; URL: https://github.com/ursalang/ursa-ts-mode
@@ -89,7 +89,10 @@
   (treesit-font-lock-rules
    :language 'ursa
    :feature 'comment
-   '((comment) @font-lock-comment-face)
+   '((line_comment) @font-lock-comment-face)
+   :language 'ursa
+   :feature 'comment
+   '((block_comment) @font-lock-comment-face)
    :language 'ursa
    :feature 'bracket
    '((["[" "]" "{" "}"]) @font-lock-bracket-face)
