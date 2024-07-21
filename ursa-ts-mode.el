@@ -1,12 +1,12 @@
 ;;; ursa-ts-mode.el --- Major mode for Ursa, using tree-sitter  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Free Software Foundation, Inc.
-;; Copyright (C) 2023 Reuben Thomas <rrt@sc3d.org>
+;; Copyright (C) 2023-2024 Reuben Thomas <rrt@sc3d.org>
 
 ;; Author     : Reuben Thomas <rrt@sc3d.org>
 ;; Maintainer : Reuben Thomas <rrt@sc3d.org>
 ;; Created    : August 2023
-;; Version    : 1.3.5
+;; Version    : 1.3.6
 ;; Keywords   : ursalang, languages, tree-sitter
 ;; Package-Requires : ((emacs "29.1"))
 ;; URL: https://github.com/ursalang/ursa-ts-mode
@@ -98,7 +98,7 @@
    '((["[" "]" "{" "}"]) @font-lock-bracket-face)
    :language 'ursa
    :feature 'keyword
-   '((["and" "break" (continue) "else" "for" "fn" "if" "let" "loop" "not" "of" "or" "return" "use"])
+   '((["and" "break" (continue) "else" "for" "fn" "gen" "if" "let" "loop" "not" "of" "or" "return" "use" "yield"])
      @font-lock-keyword-face)
    :language 'ursa
    :feature 'function-name
