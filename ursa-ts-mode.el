@@ -74,7 +74,6 @@
     table)
   "Syntax table for `ursa-ts-mode'.")
 
-
 (defvar ursa-ts--indent-rules
   `((ursa
      ((node-is "}") parent-bol 0)
@@ -146,7 +145,7 @@ Return nil if there is no name or if NODE is not a defun node."
   :syntax-table ursa-ts-mode--syntax-table
 
   (unless (treesit-ready-p 'ursa)
-    (error "Tree-sitter for Ursa isn't available"))
+    (error "Cannot load tree-sitter-ursa.  Try running `treesit-install-languageg-grammar' and select `ursa'."))
 
   (treesit-parser-create 'ursa)
 
@@ -183,12 +182,11 @@ Return nil if there is no name or if NODE is not a defun node."
   (treesit-major-mode-setup))
 
 ;;;###autoload
-(if (treesit-ready-p 'ursa)
+(when (treesit-ready-p 'ursa)
     (add-to-list 'auto-mode-alist
-                 '("\\.ursa\\'" . ursa-ts-mode)))
-
-(add-to-list 'treesit-language-source-alist
-      '((ursa "https://github.com/ursalang/tree-sitter-ursa")))
+                 '("\\.ursa\\'" . ursa-ts-mode))
+    (add-to-list 'treesit-language-source-alist
+                 '(ursa . ("https://github.com/ursalang/tree-sitter-ursa"))))
 
 (provide 'ursa-ts-mode)
 
