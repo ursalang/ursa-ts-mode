@@ -97,7 +97,7 @@
    '((["[" "]" "{" "}"]) @font-lock-bracket-face)
    :language 'ursa
    :feature 'keyword
-   '((["and" "break" (continue) "else" "for" "fn" "gen" "if" "in" "let" "loop" "not" "or" "return" "use" "yield"])
+   '((["and" "break" (continue) "else" "for" "fn" "gen" "if" "in" "let" "loop" "not" "or" "return" "use" "var" "yield"])
      @font-lock-keyword-face)
    :language 'ursa
    :feature 'function-name
