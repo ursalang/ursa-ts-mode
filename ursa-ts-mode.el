@@ -118,6 +118,9 @@
    :feature 'string
    '((string) @font-lock-string-face)
    :language 'ursa
+   :feature 'string
+   '((raw_string_literal) @font-lock-string-face)
+   :language 'ursa
    :feature 'pair
    :override t ; Needed for overriding string face on keys.
    '((property_identifier) @font-lock-property-use-face)
