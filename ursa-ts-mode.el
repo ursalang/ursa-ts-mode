@@ -184,6 +184,30 @@ Return nil if there is no name or if NODE is not a defun node."
 
   (treesit-major-mode-setup))
 
+(defun ursa-ts-format ()
+  "Format the current buffer using the `ursa format' command."
+  (interactive)
+  (if (executable-find "ursa")
+      (save-restriction ; Save the user's narrowing, if any
+        (widen)         ; Expand scope to the whole, unnarrowed buffer
+        (let* ((buf (current-buffer))
+               (min (point-min))
+               (max (point-max))
+               (indent ursa-ts-mode-indent-offset)
+               (tmpfile (make-nearby-temp-file "ursa-format")))
+          (unwind-protect
+              (with-temp-buffer
+                (insert-buffer-substring-no-properties buf min max)
+                (write-file tmpfile)
+                (call-process "ursa" nil nil nil "format" "--indent" (make-string indent ?\s) (buffer-file-name) "--output" (buffer-file-name))
+                (revert-buffer :ignore-autosave :noconfirm)
+                (let ((tmpbuf (current-buffer)))
+                  (with-current-buffer buf
+                    (replace-buffer-contents tmpbuf))))
+            (if (file-exists-p tmpfile) (delete-file tmpfile)))
+          (message "Formatted")))
+    (display-warning 'ursa-ts "`ursa' executable not found!")))
+
 ;;;###autoload
 (when (treesit-ready-p 'ursa)
     (add-to-list 'auto-mode-alist
