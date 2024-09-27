@@ -148,7 +148,7 @@ Return nil if there is no name or if NODE is not a defun node."
   :syntax-table ursa-ts-mode--syntax-table
 
   (unless (treesit-ready-p 'ursa)
-    (error "Cannot load tree-sitter-ursa.  Try running `treesit-install-languageg-grammar' and select `ursa'."))
+    (error "Cannot load tree-sitter-ursa.  Try running `treesit-install-language-grammar' and select `ursa'."))
 
   (treesit-parser-create 'ursa)
 
